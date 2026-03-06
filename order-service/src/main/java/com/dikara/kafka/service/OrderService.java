@@ -29,6 +29,7 @@ public class OrderService {
         order.setProductName(request.getProductName());
         order.setQuantity(request.getQuantity());
         order.setPrice(request.getPrice());
+        order.setStatus("PENDING");
 
         Order savedOrder = orderRepository.save(order);
 
@@ -36,7 +37,8 @@ public class OrderService {
                 savedOrder.getId(),
                 savedOrder.getProductName(),
                 savedOrder.getQuantity(),
-                savedOrder.getPrice()
+                savedOrder.getPrice(),
+                savedOrder.getStatus()
         );
 
 

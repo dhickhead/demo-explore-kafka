@@ -16,13 +16,25 @@ public class Order {
 
     private Double price;
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Column(name = "status")
+    private String status;
+
     public Order() {
     }
 
-    public Order(String productName, Integer quantity, Double price) {
+    public Order(String productName, Integer quantity, Double price, String status) {
         this.productName = productName;
         this.quantity = quantity;
         this.price = price;
+        this.status = status;
     }
 
     public Long getId() {

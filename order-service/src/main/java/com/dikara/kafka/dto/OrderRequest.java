@@ -6,6 +6,8 @@ public class OrderRequest {
     private Integer quantity;
     private Double price;
 
+
+
     public String getProductName() {
         return productName;
     }
@@ -29,4 +31,5 @@ public class OrderRequest {
     public void setPrice(Double price) {
         this.price = price;
     }
+
 }
