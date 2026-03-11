@@ -18,9 +18,11 @@ public class PaymentService {
         Payment payment = new Payment();
 
         payment.setOrderId(event.getOrderId());
-        payment.setStatus("PENDING");
+        //payment.setStatus("PENDING");
+        payment.setStatus("SUCCESS");
 
         paymentRepository.save(payment);
+        System.out.println("Payment processed");
 
     }
 

@@ -16,7 +16,7 @@ public class OrderConsumer {
 
 
     @KafkaListener(
-            topics = "order-topic",
+            topics = "order-created",
             groupId = "payment-group"
     )
     public void consume(OrderCreatedEvent event) {
